@@ -1,4 +1,7 @@
-# Replace the "ANSWER HERE" for your answer
-
-def number_to_month(month):
-    return "ANSWER HERE" # Remove this line and implement
+def number_to_month (month):
+    if month in range(1, 13):
+        list = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+        return list[month-1].lower()
+    else:
+        return "error"
+number_to_month(1)
