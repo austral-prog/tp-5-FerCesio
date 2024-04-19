@@ -21,8 +21,12 @@ def to_string(a, b, c):
         y = f"f(x) = {a} * X^2 + {b} * X + {c}"
         return y 
     else:
-        t = f"f(x) = {b} * X + {c}"
-        return t 
+        if b != 0:
+            t = f"f(x) = {b} * X + {c}"
+            return t
+        else:
+            i = f"f(x) = {c}"
+            return i  
 to_string(2,-3,1)
 
 def derivation(a,b,c):
