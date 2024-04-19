@@ -17,17 +17,30 @@ def value_y(a, b, c, x):
 value_y(1,-3,2,-1)
 
 def to_string(a, b, c):
-    if a != 0:
+    if a != 0 and b != 0 and c != 0:
         y = f"f(x) = {a} * X^2 + {b} * X + {c}"
-        return y 
+        return y
+    elif b == 0 and c != 0 and a != 0:
+        s = f"f(x) = {a} * X^2 + {c}"
+        return s
+    elif c == 0 and b != 0 and a != 0:
+        j = f"f(x) = {a} * X^2 + {b} * X"
+        return j
+    elif a == 0 and c != 0 and b != 0:
+        t = f"f(x) = {b} * X + {c}"
+        return t 
+    elif a != 0 and b == 0 and c == 0:
+        l = f"f(x) = {a} * X^2"
+        return l 
+    elif a == 0 and b != 0 and c == 0:
+        p = f"f(x) = {b} * X"
+        return p
+    elif a == 0 and b == 0 and c != 0:
+        u = f"f(x) = {c}"
+        return u 
     else:
-        if b != 0:
-            t = f"f(x) = {b} * X + {c}"
-            return t
-        else:
-            i = f"f(x) = {c}"
-            return i  
-to_string(2,-3,1)
+        return "f(x) = 0"
+to_string(-2,0,1)
 
 def derivation(a,b,c):
     if 2*a == 0:
