@@ -4,7 +4,7 @@ def roots(a, b, c):
         root1=(-b+math.sqrt(b**2-4*a*c))/(2*a)
         root2=(-b-math.sqrt(b**2-4*a*c))/(2*a)
         if root1 != root2:
-            return f"({root1},{root2})"
+            return f"({root1}, {root2})"
         else:
             return f"({root1})"
     else:
@@ -26,6 +26,6 @@ def derivation(a,b,c):
         y = f"f'(x) = {b}"
         return y
     else:
-        d = f"f'(x) = {2*a}x + {b}"
+        d = f"f'(x) = {2*a} * X + {b}"
         return d
 derivation(2, -3, 1)
