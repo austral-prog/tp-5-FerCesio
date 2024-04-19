@@ -26,6 +26,10 @@ def derivation(a,b,c):
         y = f"f'(x) = {b}"
         return y
     else:
-        d = f"f'(x) = {2*a} * X + {b}"
-        return d
+        if b != 0:
+            d = f"f'(x) = {2*a} * X + {b}"
+            return d
+        else:
+            g = f"f'(x) = {2*a} * X"
+            return g
 derivation(2, -3, 1)
